@@ -1,42 +1,62 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url(register/register.css);
+@import url(profile/profile.css);
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1, h2, h3 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+@media (max-width: 540px) {
+  h1 {
+    font-size: 26px;
+    margin: 0 0 10px;
+  }
+
+  h2, h3 {
+    margin-top: 30px;
+    font-size: 18px;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+button {
+  padding: 16px;
+  margin-top: 20px;
+  background-color: rgba(237, 176, 33, 0.715);
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+button:hover {
+  background-color: rgba(237, 176, 33);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+@media (max-width: 540px) {
+  button {
+    margin-top: 16px;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (max-width: 540px) {
+  .error-message {
+    font-size: 10px;
   }
 }
